@@ -121,11 +121,25 @@
   overflow: hidden;
 }
 
+@keyframes Open {
+  from {
+    opacity: 0;
+    left: -28.5vh;
+  }
+
+  to {
+    opacity: 100%;
+    left: 0;
+  }
+}
+
 .menu-mobile-active button {
   background: transparent;
   border: 0;
   color: #fff;
   margin-bottom: 16px;
+  animation: Open 1.5s ease;
+  position: relative;
 }
 
 .menu-mobile-active button > a > span {

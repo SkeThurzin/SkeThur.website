@@ -65,7 +65,7 @@
   transition: margin 0.5s;
 }
 
-@media (width < 920px) {
+@media (width <= 920px) {
   .sidebar {
     width: 75px;
   }
@@ -106,11 +106,11 @@
 }
 
 .menu-mobile-active {
-  width: 28.5vh;
+  width: 28.7vh;
   height: 100vh;
   background-color: #000;
   z-index: 99;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   display: flex;
@@ -119,6 +119,44 @@
   justify-content: center;
   border-right: 1px solid #2f3336;
   overflow: hidden;
+  animation: opacity 0.5s ease;
+}
+
+.menu-mobile-active button a > span > span {
+  transition: all 0.5s ease;
+}
+
+.menu-mobile-active button:hover a > span > span {
+  transform: translateX(5px);
+  color: #b3b3b3;
+}
+
+.menu-mobile-active button a > span > i {
+  transition: all 0.5s ease;
+}
+
+.menu-mobile-active button:hover a > span > i {
+  color: #b3b3b3;
+}
+
+.menu-mobile-active .close {
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.menu-mobile-active .close:hover {
+  transform: translateY(-2px);
+  color: #b3b3b3;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
 }
 
 @keyframes Open {
@@ -165,3 +203,9 @@
     margin-left: 1.5rem;
   }
 }
+
+/*@media (width >= 920px) {
+  .menu-mobile-active {
+    display: none;
+  }
+}*/

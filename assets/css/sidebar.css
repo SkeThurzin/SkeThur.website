@@ -14,8 +14,11 @@
   width: 100%;
   margin-bottom: 16px;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  font-family: "Jost", sans-serif;
   justify-content: center;
+  letter-spacing: 5px;
 }
 
 .logo-img {
@@ -59,7 +62,7 @@
 }
 
 .main {
-  margin-left: 210px;
+  margin-left: 230px;
   margin-right: 6px;
   overflow: hidden;
   transition: margin 0.5s;
@@ -106,9 +109,9 @@
 }
 
 .menu-mobile-active {
-  width: 28.7vh;
+  width: 100vh;
   height: 100vh;
-  background-color: #000;
+  background-color: transparent;
   z-index: 99;
   position: absolute;
   top: 0;
@@ -120,6 +123,8 @@
   border-right: 1px solid #2f3336;
   overflow: hidden;
   animation: opacity 0.5s ease;
+
+  backdrop-filter: blur(10px);
 }
 
 .menu-mobile-active button a > span > span {
@@ -180,6 +185,7 @@
   position: relative;
 }
 
+
 .menu-mobile-active button > a > span {
   display: inline-flex;
   align-items: center;
@@ -204,8 +210,8 @@
   }
 }
 
-/*@media (width >= 920px) {
+@media (width >= 920px) {
   .menu-mobile-active {
     display: none;
   }
-}*/
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkeThur</title>
+    <link rel="stylesheet" href="/assets/css/sidebar.css" />
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin&family=Jost:ital,wght@1,300&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <header class="sidebar-header">
+        <img
+          class="logo-img"
+          src="/assets/images/SkeThur.webp"
+          alt="SkeThur - Imagem"
+        />
+      </header>
+
+      <nav class="nav-list">
+        <!-- Home -->
+        <a href="/home.html" rel="noopener noreferrer">
+          <button>
+            <span>
+              <i class="material-symbols-outlined"> home </i>
+              <span class="name" style="margin-top: 3px">Home</span>
+            </span>
+          </button>
+        </a>
+        <!-- Projects -->
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          <button>
+            <span>
+              <i class="material-symbols-outlined"> settings_ethernet </i>
+              <span class="name" style="margin-top: 2.2px">Projects</span>
+            </span>
+          </button>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Menu Mobile -->
+
+    <button class="button-mobile" onclick="toggleMenu()">
+      <i class="material-symbols-outlined"> menu </i>
+    </button>
+
+    <nav class="menu-mobile" id="menu-mobile">
+      <button class="close" onclick="toggleMenu()">
+        <span>
+          <i class="material-symbols-outlined"> close </i>
+        </span>
+      </button>
+
+      <button>
+        <a
+          style="color: #fff; text-decoration: none"
+          href="/home.html"
+          rel="noopener noreferrer"
+        >
+        <span>
+          <i class="material-symbols-outlined"> home </i>
+          <span class="mobile-text" style="margin-top: 3px">Home</span>
+        </span>
+    </a>
+      </button>
+
+      <button>
+        <a
+          style="color: #fff; text-decoration: none"
+          href="http://"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>
+            <i class="material-symbols-outlined"> settings_ethernet </i>
+            <span class="mobile-text" style="margin-top: 2.2px">Projects</span>
+          </span>
+        </a>
+      </button>
+    </nav>
+    
+
+    <main class="main">
+      <h3>Bem Vindo!</h3>
+    </main>
+    <script src="/assets/js/mobile.navbar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 190px;
+  height: 100%;
+  padding: 40px 10px 30px 10px;
+  border-right: 1px solid #2f3336;
+  transition: all 0.5s;
+}
+.sidebar-header {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  width: 38px;
+  min-height: 35px;
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+.sidebar button {
+  height: 60px;
+  background: transparent;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+}
+
+.sidebar button > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 40px;
+  padding: 0 16px 0 12px;
+  transition: all 0.5s;
+}
+
+.sidebar button:hover > span {
+  background: #141414;
+  border-radius: 5px;
+}
+
+.sidebar button > span > .name {
+  transition: transform 0.5s;
+}
+
+.sidebar button:hover > span > .name {
+  transform: translateX(3px);
+}
+
+.main {
+  margin-left: 210px;
+  margin-right: 6px;
+  overflow: hidden;
+  transition: margin 0.5s;
+}
+
+@media (width < 920px) {
+  .sidebar {
+    width: 75px;
+  }
+
+  .sidebar button > span {
+    width: 50px;
+    margin-left: 2px;
+  }
+
+  .sidebar button > span > span {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .main {
+    margin-left: 100px;
+  }
+}
+
+.button-mobile {
+  display: none;
+  align-self: flex-start;
+  align-items: center;
+  margin: 16px;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  gap: 4px;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.menu-mobile button:hover > span {
+  background: #141414;
+  border-radius: 5px;
+}
+
+.menu-mobile-active {
+  width: 28.5vh;
+  height: 100vh;
+  background-color: #000;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #2f3336;
+  overflow: hidden;
+}
+
+.menu-mobile-active button {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.menu-mobile-active button > a > span {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.mobile-text {
+  margin-left: 8px;
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+
+  .button-mobile {
+    display: flex;
+  }
+
+  .main {
+    margin-left: 1.5rem;
+  }
+}
